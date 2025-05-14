@@ -1,0 +1,29 @@
+.profile-card {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border: 2px solid #38bdf8;
+}
+
+.profile-card img {
+    animation: glow-border 2s infinite alternate;
+}
+
+@keyframes glow-border {
+    0% {
+        box-shadow: 0 0 10px #38bdf8;
+    }
+
+    100% {
+        box-shadow: 0 0 20px #38bdf8;
+    }
+}
+
+.links a {
+    background-color: #0f172a;
+    border: 1px solid #38bdf8;
+}
+
+.links a:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+}
