@@ -1,29 +1,94 @@
 .profile-card {
-    background: linear-gradient(145deg, #1e293b, #0f172a);
+    background: linear-gradient(160deg, #1e293b, #0f172a);
     border: 2px solid #38bdf8;
-}
-
-.profile-card img {
-    animation: glow-border 2s infinite alternate;
-}
-
-@keyframes glow-border {
-    0% {
-        box-shadow: 0 0 10px #38bdf8;
-    }
-
-    100% {
-        box-shadow: 0 0 20px #38bdf8;
-    }
-}
-
-.links a {
-    background-color: #0f172a;
-    border: 1px solid #38bdf8;
-}
-
-.links a:hover {
-    background-color: #38bdf8;
-    color: #0f172a;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .header-tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .header-tech img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 25px #38bdf8;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .header-tech img:hover {
+    transform: scale(1.05);
+  }
+  
+  .title-box h1 {
+    font-size: 2.2rem;
+    color: #facc15;
+  }
+  
+  .title-box .title {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-top: 5px;
+  }
+  
+  .description {
+    margin: 30px 0;
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    line-height: 1.8;
+    text-align: justify;
+    text-wrap: pretty;
+  }
+  
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .links a {
+    background: #0f172a;
+    border: 2px solid #38bdf8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #38bdf8;
     font-weight: bold;
-}
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .links a:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-2px);
+  }
+  
+  .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #1e293b;
+    color: #facc15;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+    transition: background 0.3s;
+    z-index: 100;
+  }
+  
+  .back-button:hover {
+    background: #334155;
+  }
+  
