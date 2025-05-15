@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HostCar S.A.S | Conoce a Nuestros Hosters</title>
     <link rel="stylesheet" href="landingStyles.css" />
+    <link rel="icon" href="src/img/logo.svg" type="image/svg+xml" />
 </head>
 
 <body>
@@ -20,7 +21,8 @@
         </header>
 
         <main>
-            <section class="card-grid">
+            <!-- HOSTERS -->
+            <section class="card-grid" id="hosters">
                 <a href="hosts/ivan vega/index.html" class="card-preview">
                     <img src="src/img/ivan.jpeg" alt="Ivan Vega" class="avatar" />
                     <h2>Ivan Vega</h2>
@@ -32,40 +34,50 @@
                     <h2>Miguel Acevedo</h2>
                     <p>CTO & Estratega Digital</p>
                 </a>
-
-                <!-- <a href="hosts/idaniz diaz/index.html" class="card-preview">
-                    <img src="src/img/idanis.png" alt="Idanis Diaz" class="avatar" />
-                    <h2>Idanis Diaz</h2>
-                    <p>Fundadora</p>
-                </a> -->
             </section>
-            <!-- SECCIÓN: PRODUCTOS -->
+
+            <!-- PRODUCTOS -->
             <section class="product-grid" id="productos">
                 <h2 class="section-title">Nuestros Productos</h2>
 
                 <div class="products">
-                    <a href="https://hostcar24h.com" class="product-card">
-                        <h3>HostCar24H</h3>
-                        <p>Plataforma de reservaciones premium para usuarios finales. Diseñada para ofrecer experiencias
-                            de transporte seguras, cómodas y personalizadas desde cualquier parte del mundo.</p>
-                    </a>
-
-                    <a href="https://hostcar24h.com/admins" class="product-card">
+                    <button class="product-card" data-product="admins">
                         <h3>HostCar24H Admins</h3>
                         <p>Panel avanzado para nuestro equipo interno. Permite administrar reservas especiales,
                             visualizar estadísticas y garantizar la calidad del servicio.</p>
-                    </a>
+                    </button>
+                    <button class="product-card" data-product="hostcar24h">
+                        <h3>HostCar24H</h3>
+                        <p>Plataforma de reservaciones premium para usuarios finales. Diseñada para ofrecer experiencias
+                            de transporte seguras, cómodas y personalizadas desde cualquier parte del mundo.</p>
+                    </button>
 
-                    <a href="https://hostcar24h.com/hosters" class="product-card">
+                    <button class="product-card" data-product="hosters">
                         <h3>HostCar24H Hosters</h3>
                         <p>Plataforma exclusiva para conductores certificados. Desde aquí gestionan sus asignaciones,
                             monitorean ingresos y mejoran su rendimiento operativo.</p>
-                    </a>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SERVICIOS ASOCIADOS (scroll horizontal) -->
+            <section id="services-container" class="services-grid hidden">
+                <h2 class="section-title">Servicios asociados</h2>
+
+                <div class="services-wrapper">
+                    <button id="scroll-left" class="scroll-button">‹</button>
+
+                    <div id="services-list" class="services-scroll">
+                        <!-- tarjetas se inyectan aquí -->
+                    </div>
+
+                    <button id="scroll-right" class="scroll-button">›</button>
                 </div>
             </section>
 
         </main>
 
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -96,6 +108,8 @@
             </div>
         </footer>
     </div>
+
+    <script type="module" src="src/js/main.js"></script>
 </body>
 
 </html>
